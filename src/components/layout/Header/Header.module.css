@@ -1,0 +1,138 @@
+.header {
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.searchInput {
+  width: 300px;
+  background-color: rgba(123, 44, 191, 0.1);
+  border: 2px solid var(--accent-color);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 16px;
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  background-color: rgba(123, 44, 191, 0.2);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 10px rgba(123, 44, 191, 0.2);
+}
+
+.searchInput::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 0;
+}
+
+.tag {
+  color: var(--text-primary);
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(
+    135deg,
+    rgba(123, 44, 191, 0.3),
+    rgba(157, 78, 221, 0.3)
+  );
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(123, 44, 191, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(123, 44, 191, 0.4),
+    rgba(157, 78, 221, 0.4)
+  );
+}
+
+/* Active/Selected state for genre tags */
+.tag.highlight {
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--accent-secondary)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(123, 44, 191, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Clear button specific styling */
+.tag#clear {
+  background: linear-gradient(
+    135deg,
+    #e31837,
+    #ff4757
+  );
+  color: white;
+  border: none;
+  box-shadow: 0 2px 4px rgba(227, 24, 55, 0.3);
+}
+
+.tag#clear:hover {
+  background: linear-gradient(
+    135deg,
+    #ff4757,
+    #e31837
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(227, 24, 55, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .searchForm {
+    justify-content: center;
+  }
+
+  .searchInput {
+    width: 250px;
+  }
+
+  .tags {
+    gap: 0.5rem;
+  }
+
+  .tag {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .searchInput {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .tags {
+    padding: 0.5rem 0;
+  }
+}
+
+

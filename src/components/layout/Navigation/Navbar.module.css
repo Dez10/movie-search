@@ -1,0 +1,106 @@
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 50px; /* Adjust this value to match your desired logo size */
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(35%) sepia(77%) saturate(1071%)
+    hue-rotate(242deg) brightness(84%) contrast(92%);
+}
+
+.logoImage:hover {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(77%) saturate(1071%) hue-rotate(242deg) brightness(100%) contrast(92%);
+  transition: filter 0.3s ease;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navLink,
+.navLinks a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.navLink:hover,
+.navLinks a:hover {
+  color: var(--accent-secondary);
+}
+
+.navLink::after,
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after,
+.navLinks a:hover::after,
+.navLinks a.active::after {
+  width: 100%;
+}
+
+.navLinks a.active {
+  color: var(--accent-secondary);
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .logoImage {
+    height: 40px; /* Slightly smaller on mobile */
+  }
+
+  .navLinks {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .logoImage {
+    height: 35px;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

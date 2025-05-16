@@ -1,0 +1,104 @@
+.cinematicHeader {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cinematicHeader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(123, 44, 191, 0.05),
+    rgba(123, 44, 191, 0.05) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  pointer-events: none;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.titleContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  color: var(--text-primary);
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(123, 44, 191, 0.5);
+}
+
+.underline {
+  width: 100px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 1rem auto;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(123, 44, 191, 0.5);
+}
+
+.decorativeElements {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cameraReel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reelCircle {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 15px rgba(123, 44, 191, 0.3);
+}
+
+.filmStrip {
+  width: 150px;
+  height: 20px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent-color),
+    var(--accent-color) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .filmStrip {
+    width: 100px;
+  }
+
+  .cinematicHeader {
+    padding: 2rem 1rem;
+  }
+}

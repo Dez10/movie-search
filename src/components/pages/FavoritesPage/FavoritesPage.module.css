@@ -1,0 +1,32 @@
+.favoritesPage {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.favoritesPage h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.movieGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.emptyState {
+  text-align: center;
+  color: white;
+  padding: 3rem;
+}
+
+.emptyState h2 {
+  margin-bottom: 1rem;
+}
+
+.emptyState p {
+  color: #bbb;
+}
