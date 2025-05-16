@@ -1,0 +1,39 @@
+.container {
+  padding: 2rem;
+}
+
+.movieGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  color: white;
+}
+
+.pageButton {
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.currentPage {
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  border: 2px solid orange;
+}
